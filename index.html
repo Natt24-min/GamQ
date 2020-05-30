@@ -12,34 +12,220 @@
         <script src="cordova.js"></script>
     </head>
     <body>
+
+      
+      <!-- Start of first page -->
         <div data-role="page" id="primera">
-
-            <div data-role="header">
-                <h1>Título de la página</h1>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <p>Contenido de la página</p>
+            <div data-role="main" class="ui-content">
+              
+            <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true" class="ui-icon-location ui-btn-icon-left">
+                <option value="español">Español</option>
+                <option value="ingles">Inglés</option>
+                <option value="portugues">Portugués</option>
+                <option value="frances">Francés</option>
+                <option value="italiano">Italiano</option>
+            </select>
+              
+              <img src="img/splash.png" width="400" height="540" />
+              <a href="#a-jugar" class="ui-btn ui-corner-all ui-shadow">¡A JUGAR!</a>
+              <br>
+              <a href="#registrate" class="ui-btn ui-corner-all ui-shadow" >REGÍSTRATE</a>
             </div><!-- /content -->
-
-            <div data-role="footer" data-position="fixed">
-                <h4>Footer de la página.</h4>
-            </div><!-- /footer -->
+              
         </div><!-- /page -->
+      
+      
+      <!-- Start of third page -->
+<div data-role="page" id="registrate">
+	<div data-role="main" class="ui-content">
+    <a href="#primera" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Atrás</a>
+   <h1>
+     Ingresa tu información
+    </h1>
+    <form>
+    <label for="email">Correo o usuario</label>
+    <input type="email" data-clear-btn="false" name="email" id="email" value="" >
+     <label for="password">Contraseña</label>
+     <input type="password" data-clear-btn="false" name="password" id="password" value="" autocomplete="off">
+    </form>
+    <a href="#perfil" class="ui-btn ui-corner-all ui-shadow" >INGRESAR</a>
+    <a href="#restablecercontraseña">Restablecer contraseña</a> 
+    <a href="#crear-perfil" class="ui-btn ui-corner-all ui-shadow" >CREAR PERFIL</a>
+    <br>
+       <a  href="#ingresar-con-facebook" class="ui-btn ui-corner-all ui-shadow" >INGRESA CON FACEBOOK</a>
+    <a  href="#ingresar-con-google" class="ui-btn ui-corner-all ui-shadow" >INGRESA CON GOOGLE</a>
+    <br>
+    Al registrarte en GamQ, aceptas nuestros Términos y Política de privacidad.
+    
+	</div><!-- /content -->
+</div><!-- /page -->
+      
+    <!-- Start of fourth page -->
+<div data-role="page" id="crear-perfil">
+	<div data-role="main" class="ui-content">
+    <a href="#registrate" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Atrás</a>
+       <h1>
+         ¿Cuántos años tienes?
+        </h1>
+<form>
+     <label for="number-3">Edad</label>
+     <input type="number" data-clear-btn="false" name="number-3" pattern="[0-9]*" id="number-3" value="">
+</form>
+    <a href="#continuar" class="ui-btn-inline  ui-btn ui-corner-all ui-shadow">Continuar</a>
+	</div><!-- /content -->
+</div><!-- /page -->
+      
+       <!-- Start of fifth page -->
+<div data-role="page" id="continuar">
+	<div data-role="main" class="ui-content">
+    <a href="#crear-perfil" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Atrás</a>
+       <h1>
+         ¿Cómo te llamas?
+        </h1>
+<form>
+     <label for="number">Nombre</label>
+     <input type="number" data-clear-btn="false" name="number" pattern="[0-9]*" id="number" value="">
+</form>
+    <a href="#correo" class="ui-btn-inline  ui-btn ui-corner-all ui-shadow">Continuar</a>
+
+	</div><!-- /content -->
+</div><!-- /page -->
+      
+      <!-- Start of sixth page -->
+<div data-role="page" id="correo">
+	<div data-role="main" class="ui-content">
+    <a href="#continuar" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Atrás</a>
+       <h1>
+         ¿Cuál es tu dirección de correo electrónico?
+        </h1>
+<form>
+     <label for="number1">Correo electrónico</label>
+     <input type="number" data-clear-btn="false" name="number1" pattern="[0-9]*" id="number1" value="">
+</form>
+    <a href="#crea-contraseña" class="ui-btn-inline  ui-btn ui-corner-all ui-shadow">Continuar</a>
+
+	</div><!-- /content -->
+</div><!-- /page -->
+      
+       <!-- Start of seventh page -->
+<div data-role="page" id="crea-contraseña">
+	<div data-role="main" class="ui-content">
+    <a href="#correo" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Atrás</a>
+       <h1>
+         Crea una contraseña
+        </h1>
+<form>
+     <label for="number2">Contraseña</label>
+     <input type="number" data-clear-btn="false" name="number2" pattern="[0-9]*" id="number2" value="">
+</form>
+    <a href="#perfil" class="ui-btn-inline  ui-btn ui-corner-all ui-shadow">Crear perfil</a>
+
+	</div><!-- /content -->
+</div><!-- /page -->
+      
+      <!-- Start of eight page //-- Revisar -->
+<div data-role="page" id="perfil">
+  <div data-role="header" data-position="fixed">
+    <a href="#configuración" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-right">Configuración</a>
+  </div>
+	<div data-role="main" class="ui-content">
+    <h1>Perfil</h1>
+    <a href="#editar-foto-perfil" class="ui-btn ui-shadow ui-corner-all ui-icon-edit ui-btn-icon-notext">Editar-foto-perfil</a>
+  </div><!-- /content -->
+
+  
+  <div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+    <ul>
+        <li><a href="#perfil" class="ui-btn-active ui-icon-user ui-btn ui-btn-icon-notext">perfil</a></li>
+        <li><a href="#quiz" class="ui-btn-active ui-icon-bars ui-btn ui-btn-icon-notext">Quiz</a></li>
+    </ul>
+</div><!-- /navbar -->
+</div>
+  
+</div><!-- /page -->
+      
+      <!-- Start of ninth page -->
+<div data-role="page" id="configuración">
+	<div data-role="main" class="ui-content">
+    <p><a href="#perfil">Ok</a></p>
+    <h1>
+      Configuración
+    </h1>
+    <form>
+     <label for="text-1">Nombre</label>
+     <input type="text" name="text-1" id="text-1" value="">
+</form>
+    <form>
+     <label for="text-1">Usuario</label>
+     <input type="text" name="text" id="text" value="">
+</form>
+    <form>
+     <label for="password-1">Contraseña</label>
+     <input type="password" data-clear-btn="false" name="password-1" id="password-1" value="" autocomplete="off">
+    </form>
+      <form>
+    <label for="email-1">Correo</label>
+    <input type="email" data-clear-btn="false" name="email-1" id="email-1" value="">
+    </form>
+    <a href="#primera" class="ui-btn-inline  ui-btn ui-corner-all ui-shadow">Cerrar sesión</a>
+    
+    </div><!-- /content -->
+</div><!-- /page -->
+      
+      <!-- Start of tenth page -->
+      <div data-role="page" id="quiz">
+            <div data-role="main" class="ui-content">
+              <h1>
+     Empecemos...
+    </h1>
+              <a href="#tus-quiz" class="ui-btn ui-corner-all ui-shadow">Tus Quiz</a>
+              <br>
+              <a href="#Crear-Quiz" class="ui-btn ui-corner-all ui-shadow" >Crear Quiz</a>
+              
+              
+    <div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+    <ul>
+        <li><a href="#perfil" class="ui-btn-active ui-icon-user ui-btn ui-btn-icon-notext">perfil</a></li>
+        <li><a href="#quiz" class="ui-btn-active ui-icon-bars ui-btn ui-btn-icon-notext">Quiz</a></li>
+    </ul>
+</div><!-- /navbar -->
+     </div><!-- /content -->
+</div><!-- /page -->
         
-        <div data-role="page" id="segunda">
-
-            <div data-role="header">
-                <h1>Título de la página</h1>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <p>Contenido de la página.</p>
-            </div><!-- /content -->
-
-            <div data-role="footer">
-                <h4>Footer de la página.</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
-    </body>
+      <!-- Start of eleventh page -->
+        <div data-role="page" id="tus-quiz">
+            <div data-role="main" class="ui-content">
+              <a href="#correo" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Atrás</a>
+        
+              <form>
+     <label for="text4">Ponle un nombre</label>
+     <input type="text" name="text4" id="text4" value="">
+</form>
+              <h1>
+                ¿Cuál es el tema?
+              </h1>
+              <fieldset data-role="controlgroup" data-type="horizontal">
+    <legend>Horizontal controlgroup, radio:</legend>
+    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+    <label for="radio-choice-h-2a">Biología</label>
+    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+    <label for="radio-choice-h-2b">Inglés</label>
+    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="other">
+    <label for="radio-choice-h-2c">Cálculo</label>
+                <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2d" value="on" checked="checked">
+    <label for="radio-choice-h-2a">Lengua Castellana</label>
+    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2e" value="off">
+    <label for="radio-choice-h-2b">Diseño Gráfico</label>
+    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2f" value="other">
+    <label for="radio-choice-h-2c">Anatomía</label>
+                 <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2g" value="other">
+    <label for="radio-choice-h-2c">Otro</label>
+</fieldset>
+              <a href="#continuar" class="ui-btn-inline  ui-btn ui-corner-all ui-shadow">Continuar</a>
+              </div><!-- /content -->
+</div><!-- /page -->
+    
+      </div></body>
 </html>
